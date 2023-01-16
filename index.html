@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7870c66c71.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header>
+          <h1>WEATHER FORECAST</h1>
+        </header>
+        <main>
+          <form id="search-form">
+            <div class="choise">
+              <input id="city-input" type="text" placeholder="Enter a city" />
+              <button type="submit" class="search" id="search">Search</button>
+              <button type="submit" class="current" id="current">Current</button>
+            </div>
+          </form>
+          <div class="current-meta">
+            <div class="city">
+              <h2 class="current-city" id="city">Dnipro</h2>
+              <p id="currentDay"></p>
+            </div>
+            <div class="current-weather">
+              <h3>
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <span class="temp" id="temp"> -3</span
+                ><span class="unit"><a href="#" id="celsius">°C</a></span>
+                /<span><a href="#" id="fahrenheit">°F</a></span>
+              </h3>
+              <p><span id="description">Mostly clear</span> Humidity <span id="humidity">-12</span> %</p>
+            </div>
+          </div>
+          <div class="card-section">
+            <div class="card-body">
+              <h5 class="card-title">Sun</h5>
+              <i class="fa-solid fa-sun icon-sun"></i>
+
+              <p class="card-text">+3°C / -5°C</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Mon</h5>
+              <i class="fa-solid fa-cloud icon-cloud"></i>
+
+              <p class="card-text">+5°C / -2°C</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <i class="fa-solid fa-sun icon-sun"></i>
+
+              <p class="card-text">+3°C / -1°C</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Wed</h5>
+              <i class="fa-solid fa-snowflake icon-snow"></i>
+
+              <p class="card-text">+7°C / -1°C</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+              <i class="fa-solid fa-sun icon-sun"></i>
+
+              <p class="card-text">+4°C / 0°C</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <i class="fa-solid fa-bolt icon-bolt"></i>
+
+              <p class="card-text">+8°C / +3°C</p>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <p class="footer-text">© 2022 WeatherForecast</p>
+          <p class="footer-text-bottom"><a href="https://github.com/farfalina1908/SheCodes-Plus-HW-Week6">Open-source code</a> by Olena Berezina</p>
+        </footer>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

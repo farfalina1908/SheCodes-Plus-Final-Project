@@ -1,0 +1,165 @@
+body {
+   padding-left: 120px;
+   padding-right: 120px;
+   padding-top: 70px;
+   padding-bottom: 20px;
+   font-family: "Roboto", sans-serif;
+}
+h1 {
+   text-transform: uppercase;
+
+   font-size: 48px;
+   font-weight: 900px;
+   color: #596aca;
+   text-align: left;
+}
+h2 {
+   font-size: 28px;
+   font-weight: 700px;
+   color: #596aca;
+}
+h3 {
+   font-size: 28px;
+   font-weight: 700px;
+   color: #5a6275;
+   text-align: center;
+}
+p {
+   font-size: 18px;
+   font-weight: 400px;
+   color: #6e7586;
+}
+input {
+   width: 667px;
+   height: 60px;
+   margin-top: 50px;
+   margin-right: 20px;
+   padding: 10px 25px;
+   background-color: #e9ebee;
+   color: #959cab;
+   border: none;
+}
+a {
+   text-decoration: none;
+   color: #959cab;
+}
+a:hover,
+a:focus {
+   color: #596aca;
+}
+
+.wrapper {
+   margin: auto;
+   width: 1000px;
+   padding: 20px;
+}
+.choise {
+   font-size: 18px;
+   font-weight: 400px;
+}
+.search {
+   width: 120px;
+   height: 60px;
+   padding: 5px 10px;
+   margin-right: 20px;
+   background-color: #fff;
+   color: #596aca;
+   border: 3px solid;
+   border-color: #596aca;
+   cursor: pointer;
+}
+.search:hover,
+.search:focus {
+   border-color: #3e4fad;
+   color: #3e4fad;
+}
+.current-meta {
+   display: flex;
+}
+.current {
+   width: 120px;
+   height: 60px;
+   padding: 5px 10px;
+   background-color: #596aca;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
+
+.current:hover,
+.current:focus {
+   background-color: #3e4fad;
+}
+
+.city,
+.current-weather {
+   margin-top: 50px;
+}
+.current-city {
+   margin-top: 25px;
+}
+.current-weather {
+   margin-left: 600px;
+}
+.temp {
+   color: #596aca;
+}
+.icon-sun {
+   font-size: 70px;
+
+   color: #f8f170;
+}
+.icon-cloud {
+   font-size: 70px;
+
+   color: #7589fa;
+}
+.icon-snow {
+   font-size: 70px;
+
+   color: #7589fa;
+}
+.icon-bolt {
+   font-size: 70px;
+
+   color: #7589fa;
+}
+.card-section {
+   margin-top: 150px;
+}
+.card-body {
+   width: 100px;
+
+   display: inline-block;
+   text-align: center;
+}
+.card-body:not(:last-child) {
+   margin-right: 65px;
+}
+.card-title {
+   font-size: 18px;
+   font-weight: 700px;
+   color: #596aca;
+   margin-bottom: 15px;
+}
+.card-text {
+   font-size: 14px;
+   font-weight: 400px;
+   color: #6e7586;
+   margin-top: 15px;
+}
+.footer-text {
+   margin-top: 70px;
+   margin-bottom: 15px;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400px;
+   color: #6e7586;
+}
+.footer-text-bottom {
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400px;
+   color: #6e7586;
+}
