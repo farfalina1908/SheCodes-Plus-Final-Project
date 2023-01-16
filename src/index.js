@@ -1,10 +1,10 @@
 function showDate(date) {
    let currentHours = date.getHours();
-   if (currentHours < 0) {
+   if (currentHours < 10) {
       currentHours = `0${currentHours}`;
    }
    let currentMinutes = date.getMinutes();
-   if (currentMinutes < 0) {
+   if (currentMinutes < 10) {
       currentMinutes = `0${currentMinutes}`;
    }
    let dayIndex = date.getDay();
@@ -27,12 +27,15 @@ currentDate.innerHTML = showDate(currentTime);
 
 
 function showTemp(response) {
+   let humidityElement = document.querySelector("#humidity");
+   let windElement = document.querySelector("#wind");
    document.querySelector("#city").innerHTML = response.data.name;
    document.querySelector("#temp").innerHTML = Math.round(
       response.data.main.temp
    );
-   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
    document.querySelector("#description").innerHTML = response.data.weather[0].main;
+   humidityElement.innerHTML = response.data.main.humidity;
+   windElement.innerHTML = Math.round(response.data.wind.speed);
   
 }
 
@@ -48,11 +51,13 @@ function showCity(event) {
    event.preventDefault();
    let city = document.querySelector("#city-input").value;
    search(city);
+   document.querySelector("#city-input").value = ("Enter a city")
 }
 
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", showCity);
+
 
 function changeToFahrenheit(event) {
    event.preventDefault();
