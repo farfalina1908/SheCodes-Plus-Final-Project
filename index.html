@@ -42,24 +42,30 @@
               <button type="submit" class="current" id="current">Current</button>
             </div>
           </form>
+          <div class="current-wrapper"></div>
           <div class="current-meta">
-            <div class="city">
+              <div class="city">
               <h2 class="current-city" id="city">Dnipro</h2>
               <p id="currentDay"></p>
               <p id="description">Mostly clear</p>
-            </div>
-            <div class="current-weather">
-              <h3>
-                <i class="fa-solid fa-sun icon-sun"></i>
-                <span class="temp" id="temp"> -3</span
-                ><span class="unit"><a href="#" id="celsius">°C</a></span>
-                /<span><a href="#" id="fahrenheit">°F</a></span>
-              </h3>
+            
+        </div>
+        
+            <div class="d-flex current-weather">
+              <img src="" alt="current-weather-icon" id="current-weather-icon" class="current-weather-icon">
+              
+                <div>
+               <h2><span class="temp" id="temp"></span
+                ><span class="unit"><a href="#" id="celsius-link" class="active">°C</a></span>
+                /<span><a href="#" id="fahrenheit-link">°F</a></span></h2>
               <ul>
+               
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
-            </div>
+          </div>
+          </div> 
+        </div>
           </div>
           <div class="card-section">
             <div class="card-body">

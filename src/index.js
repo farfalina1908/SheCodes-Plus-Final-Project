@@ -27,17 +27,24 @@ currentDate.innerHTML = showDate(currentTime);
 
 
 function showTemp(response) {
+   console.log(response.data);
+   let temperatureElement = document.querySelector("#temp");
    let humidityElement = document.querySelector("#humidity");
    let windElement = document.querySelector("#wind");
+   let iconElement = document.querySelector("#current-weather-icon");
    document.querySelector("#city").innerHTML = response.data.name;
-   document.querySelector("#temp").innerHTML = Math.round(
-      response.data.main.temp
-   );
+   // document.querySelector("#temp").innerHTML = Math.round(
+   //    response.data.main.temp
+   // );
    document.querySelector("#description").innerHTML = response.data.weather[0].main;
+   celsiusTemperature = Math.round(response.data.main.temp);
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
    humidityElement.innerHTML = response.data.main.humidity;
    windElement.innerHTML = Math.round(response.data.wind.speed);
-  
+   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 
 function search(city) {
    let apiKey = "a78425defdca5077e5f0280ae5c6e2db";
@@ -62,21 +69,28 @@ searchForm.addEventListener("submit", showCity);
 function changeToFahrenheit(event) {
    event.preventDefault();
    let temperatureElement = document.querySelector("#temp");
-   temperatureElement.innerHTML = 66;
+   celsiusLink.classList.remove("active");
+   fahrenheitLink.classList.add("active");
+   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 +32;
+   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function changeToCelsius(event) {
    event.preventDefault();
    let temperatureElement = document.querySelector("#temp");
-   temperatureElement.innerHTML = 19;
+   celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");  
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeToFahrenheit);
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeToCelsius);
+let celsiusTemperature = null;
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", changeToFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", changeToCelsius);
 
+search("Dnipro");
 
 
 function handlePosition(position) {

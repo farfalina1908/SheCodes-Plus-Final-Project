@@ -26,9 +26,11 @@ h3 {
 }
 p {
    font-size: 18px;
+   line-height: 22px;
    font-weight: 400px;
    color: #6e7586;
    margin-bottom: 8px;
+
 }
 input {
    width: 667px;
@@ -45,7 +47,8 @@ a {
    color: #959cab;
 }
 a:hover,
-a:focus {
+a:focus,
+a.active {
    color: #596aca;
 }
 
@@ -57,16 +60,19 @@ li {
    list-style: none;
    margin-bottom: 8px;
    padding: 0;
-   color: #6e7586;;
-   font-size: 16px;
-   line-height: 19px;
+   color: #6e7586;
+   font-size: 18px;
+   line-height: 22px;
    font-weight: 400;
    }
 
    li::first-letter {
        text-transform: capitalize;  
    }
-
+.container {
+   margin: 0, auto;
+   width: 1000px;
+}
 .wrapper {
    margin: auto;
    width: 1000px;
@@ -115,13 +121,24 @@ li {
    margin-top: 50px;
 }
 .current-city {
-   margin-top: 25px;
+   margin-top: 0;
 }
 .current-weather {
-   margin-left: 600px;
+   margin-left: auto;
 }
 .temp {
    color: #596aca;
+}
+.current-weather-icon {
+  margin-right: 40px;
+}
+.weather-temperature .active {
+   color: #596aca;
+   cursor: default;
+}
+
+.weather-temperature .active:hover {
+   text-decoration: none;
 }
 .icon-sun {
    font-size: 70px;
