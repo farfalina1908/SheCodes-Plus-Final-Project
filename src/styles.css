@@ -127,6 +127,7 @@ li {
 }
 .current-weather {
    margin-left: auto;
+   margin-right: 10px;
 }
 .temp {
    color: #596aca;
@@ -142,7 +143,24 @@ li {
 .weather-temperature .active:hover {
    text-decoration: none;
 }
-.icon-sun {
+.weather-forecast {
+   margin-top: 80px;
+   text-align: center;
+
+}
+.weather-forecast-date {
+   font-size: 18px;
+   color: #6e7586;
+   opacity: 0.9;
+}
+.weather-forecast-temperature-min {
+   opacity: 0.5;
+}
+.weather-forecast-temperature {
+   font-size: 15px;
+}
+
+/* .icon-sun {
    font-size: 70px;
 
    color: #f8f170;
@@ -185,7 +203,7 @@ li {
    font-weight: 400px;
    color: #6e7586;
    margin-top: 15px;
-}
+} */
 .footer-text {
    margin-top: 70px;
    margin-bottom: 15px;
